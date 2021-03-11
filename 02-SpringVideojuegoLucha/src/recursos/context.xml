@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<!-- Por defecto, Spring NO va a buscar anotaciones a las clases, solo va a buscar
+	los beans dados de alta en este fichero 
+	
+	Si queremos decirle a Spring que vaya a buscar beans y darlos de alta a clases, tenemos que
+	decirselo con la siguiente anotacion
+	
+	Nota, hay que add el namespace "context" que esta en la pestaña "Namespaces" de abajo
+	de eclipse
+	
+	base-packeage seria el paquete raiz donde tiene que empezar a buscar las anotaciones de las
+	clases
+	-->
+	<context:component-scan base-package="modelo"></context:component-scan>
+</beans>
